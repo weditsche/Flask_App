@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Available Seminars</title>
+  </head>
+  <body>
+    <h1>Available Seminars</h1>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul>
+          {% for message in messages %}
+            <li>{{ message }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+    <ul>
+      {% for seminar in seminars %}
+        <li>
+          {{ seminar.street }}, {{ seminar.date }}, {{ seminar.time }}
+          <a href="{{ url_for('book', seminar_id=seminar.id) }}">Book</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
