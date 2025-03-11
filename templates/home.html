@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Home</title>
+  </head>
+  <body>
+    <!-- Navigation Menu -->
+    <nav>
+      <a href="{{ url_for('main.home') }}">Home</a> |
+      <a href="{{ url_for('main.seminars') }}">Booking</a> |
+      <a href="{{ url_for('main.mybookings') }}">My Bookings</a> |
+      <a href="{{ url_for('main.logout') }}">Logout</a>
+    </nav>
+    <h1>Welcome to Your Homepage</h1>
+    <p>Use the menu above to navigate:</p>
+    <ul>
+      <li><a href="{{ url_for('main.seminars') }}">Book a Seminar</a></li>
+      <li><a href="{{ url_for('main.mybookings') }}">View Your Bookings</a></li>
+    </ul>
+  </body>
+</html>
