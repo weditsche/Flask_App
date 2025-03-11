@@ -1,7 +1,8 @@
 # Flask_App
 
-Possible project structure for a flask app: 
+## Possible Project Structure for a Flask App
 
+```plaintext
 project-root/
 ├── app/                    # Main application package
 │   ├── __init__.py         # Initialize Flask app and extensions
@@ -21,9 +22,10 @@ project-root/
 ├── tests/                  # Unit and integration tests
 │   ├── test_routes.py
 │   ├── test_models.py
-│   └── ...                 
+│   └── ...
 ├── config.py               # Configuration file for different environments
 ├── requirements.txt        # List of Python dependencies
 ├── run.py                  # Entry point to run the Flask application
 ├── README.md               # Project overview and setup instructions
 └── .gitignore              # Files and directories to ignore in git
+
