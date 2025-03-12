@@ -1,4 +1,3 @@
-# my_flask_app/routes.py
 from flask import Blueprint, render_template, request, redirect, url_for, flash, session
 from .models import Teilnehmer, Seminar, Buchung
 from . import db

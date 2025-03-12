@@ -1,4 +1,3 @@
-# my_flask_app/models.py
 from . import db
 from werkzeug.security import generate_password_hash, check_password_hash
 
@@ -7,7 +6,7 @@ class Teilnehmer(db.Model):
     id_num = db.Column(db.Integer, primary_key=True)
     vorname = db.Column(db.String(50), nullable=False)
     nachname = db.Column(db.String(50), nullable=False)
-    pw = db.Column(db.String(128), nullable=False)  # Hashed password
+    pw = db.Column(db.String(128), nullable=False)
 
     def set_password(self, password):
         self.pw = generate_password_hash(password)
@@ -18,10 +17,10 @@ class Teilnehmer(db.Model):
 class Seminar(db.Model):
     __tablename__ = 'SEMINAR'
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(100), nullable=False)  # New column for seminar name
+    name = db.Column(db.String(100), nullable=False)
     street = db.Column(db.String(100), nullable=False)
-    date = db.Column(db.String(10), nullable=False)  # e.g., "YYYY-MM-DD"
-    time = db.Column(db.String(5), nullable=False)   # e.g., "HH:MM"
+    date = db.Column(db.String(10), nullable=False)
+    time = db.Column(db.String(5), nullable=False)
 
 
 class Buchung(db.Model):
