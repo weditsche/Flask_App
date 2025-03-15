@@ -27,3 +27,9 @@ conda install flask flask_sqlalchemy
 ```
 pip install -r requirements.txt
 ```
+
+*when everythin is set up, run:* 
+
+```
+python run.py
+```
